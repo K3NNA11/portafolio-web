@@ -73,6 +73,40 @@
             color: #a855f7;
         }
 
+        /* Language Switcher */
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .language-switcher {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(168, 85, 247, 0.2);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            border-radius: 50px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .language-switcher:hover {
+            background: rgba(168, 85, 247, 0.3);
+            border-color: #a855f7;
+            transform: scale(1.05);
+        }
+
+        .language-icon {
+            font-size: 1.2rem;
+        }
+
+        .language-text {
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
         .menu-toggle {
             display: none;
             background: none;
@@ -673,7 +707,13 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="menu-toggle">☰</button>
+            <div class="nav-right">
+                <div class="language-switcher" id="langSwitcher">
+                    <span class="language-icon">🌐</span>
+                    <span class="language-text" id="langText">ES</span>
+                </div>
+                <button class="menu-toggle">☰</button>
+            </div>
         </div>
     </nav>
 
@@ -681,11 +721,11 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="glow-text">Hola, Soy<br>Jorge Teran</h1>
-                <h2>Analista de Ciberseguridad</h2>
-                <p>Proyectos prácticos, laboratorios de ciberseguridad y write-ups técnicos.</p>
+                <h1 class="glow-text" data-es="Hola, Soy<br>Jorge Teran" data-en="Hi, I'm<br>Jorge Teran">Hola, Soy<br>Jorge Teran</h1>
+                <h2 data-es="Analista de Ciberseguridad" data-en="Cybersecurity Analyst">Analista de Ciberseguridad</h2>
+                <p data-es="Proyectos prácticos, laboratorios de ciberseguridad y write-ups técnicos." data-en="Practical projects, cybersecurity labs and technical write-ups.">Proyectos prácticos, laboratorios de ciberseguridad y write-ups técnicos.</p>
                 <div class="cta-buttons">
-                    <a href="#contact" class="btn-primary">Descargar CV</a>
+                    <a href="#contact" class="btn-primary" data-es="Descargar CV" data-en="Download CV">Descargar CV</a>
                     <div class="social-links">
                         <a href="#" class="social-link">🔗</a>
                         <a href="#" class="social-link">💼</a>
@@ -706,25 +746,25 @@
     <!-- About Section -->
     <section id="about">
         <div class="container">
-            <h2 class="section-title glow-text">Sobre Mí</h2>
+            <h2 class="section-title glow-text" data-es="Sobre Mí" data-en="About Me">Sobre Mí</h2>
             <div class="about-grid">
                 <div class="about-image glow-box">👨‍💻</div>
                 <div class="about-content">
-                    <h3>Soy [Tu Nombre]</h3>
-                    <p>Estudiante apasionado de ciberseguridad con experiencia en pruebas de penetración, análisis de vulnerabilidades y desarrollo seguro. Me enfoco en crear soluciones innovadoras para proteger sistemas y datos.</p>
-                    <p>Creo en el aprendizaje continuo y la importancia de mantenerse actualizado en el cambiante panorama de la seguridad cibernética.</p>
+                    <h3 data-es="Soy Jorge Teran" data-en="I'm Jorge Teran">Soy Jorge Teran</h3>
+                    <p data-es="Estudiante apasionado de ciberseguridad con experiencia en pruebas de penetración, análisis de vulnerabilidades y desarrollo seguro. Me enfoco en crear soluciones innovadoras para proteger sistemas y datos." data-en="Passionate cybersecurity student with experience in penetration testing, vulnerability analysis and secure development. I focus on creating innovative solutions to protect systems and data.">Estudiante apasionado de ciberseguridad con experiencia en pruebas de penetración, análisis de vulnerabilidades y desarrollo seguro. Me enfoco en crear soluciones innovadoras para proteger sistemas y datos.</p>
+                    <p data-es="Creo en el aprendizaje continuo y la importancia de mantenerse actualizado en el cambiante panorama de la seguridad cibernética." data-en="I believe in continuous learning and the importance of staying updated in the ever-changing cybersecurity landscape.">Creo en el aprendizaje continuo y la importancia de mantenerse actualizado en el cambiante panorama de la seguridad cibernética.</p>
                     <div class="services">
                         <div class="service-card">
                             <h4>🛡️ Penetration Testing</h4>
-                            <p>Comprehensive security assessments and vulnerability analysis</p>
+                            <p data-es="Evaluaciones de seguridad y análisis de vulnerabilidades" data-en="Comprehensive security assessments and vulnerability analysis">Evaluaciones de seguridad y análisis de vulnerabilidades</p>
                         </div>
                         <div class="service-card">
-                            <h4>🔒 Security Auditing</h4>
-                            <p>In-depth security audits and compliance checking</p>
+                            <h4 data-es="🔒 Auditoría de Seguridad" data-en="🔒 Security Auditing">🔒 Auditoría de Seguridad</h4>
+                            <p data-es="Auditorías de seguridad y verificación de cumplimiento" data-en="In-depth security audits and compliance checking">Auditorías de seguridad y verificación de cumplimiento</p>
                         </div>
                         <div class="service-card">
-                            <h4>💻 Incident Response</h4>
-                            <p>Rapid response and forensic analysis for security incidents</p>
+                            <h4 data-es="💻 Respuesta a Incidentes" data-en="💻 Incident Response">💻 Respuesta a Incidentes</h4>
+                            <p data-es="Respuesta rápida y análisis forense de incidentes" data-en="Rapid response and forensic analysis for security incidents">Respuesta rápida y análisis forense de incidentes</p>
                         </div>
                     </div>
                 </div>
@@ -735,7 +775,7 @@
     <!-- Skills Section -->
     <section id="skills" class="section-dark">
         <div class="container">
-            <h2 class="section-title glow-text">Mis Habilidades</h2>
+            <h2 class="section-title glow-text" data-es="Mis Habilidades" data-en="My Skills">Mis Habilidades</h2>
             <div class="skills-grid">
                 <div class="skill-item">
                     <div class="skill-icon">🐍</div>
@@ -919,52 +959,42 @@
     <!-- Projects Section -->
     <section id="projects">
         <div class="container">
-            <h2 class="section-title glow-text">Mis Proyectos</h2>
+            <h2 class="section-title glow-text" data-es="Mis Proyectos" data-en="My Projects">Mis Proyectos</h2>
             <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="offensive">
-  Seguridad Ofensiva
-</button>
-                <button class="filter-btn" data-filter="security">Security Tools</button>
+                <button class="filter-btn active" data-filter="all" data-es="Todos" data-en="All">Todos</button>
+                <button class="filter-btn" data-filter="offensive" data-es="Seguridad Ofensiva" data-en="Offensive Security">Seguridad Ofensiva</button>
+                <button class="filter-btn" data-filter="security" data-es="Herramientas" data-en="Security Tools">Herramientas</button>
                 <button class="filter-btn" data-filter="pentesting">Pentesting</button>
             </div>
             <div class="projects-grid">
                 <div class="project-card" data-category="offensive">
-  <div class="project-image">🥔</div>
+                    <div class="project-image">🥔</div>
+                    <div class="project-content">
+                        <h3 data-es="Patata Mágica - TheHackersLabs (Fácil)" data-en="Magic Potato - TheHackersLabs (Easy)">Patata Mágica - TheHackersLabs (Fácil)</h3>
+                        <p data-es="Análisis de una máquina Windows vulnerable enfocada en enumeración, detección de fallos de configuración y escalada de privilegios." data-en="Analysis of a vulnerable Windows machine focused on enumeration, misconfiguration detection and privilege escalation.">Análisis de una máquina Windows vulnerable enfocada en enumeración, detección de fallos de configuración y escalada de privilegios.</p>
+                        <div class="project-tags">
+                            <span class="tag">Local File Inclusion (LFI)</span>
+                            <span class="tag" data-es="Enumeración" data-en="Enumeration">Enumeración</span>
+                            <span class="tag">Reverse shell vía web</span>
+                            <span class="tag">Privilege Escalation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/K3NNA11/thl-patata-magica-windows" target="_blank" data-es="🔗 Ver Write-up" data-en="🔗 View Write-up">🔗 Ver Write-up</a>
+                        </div>
+                    </div>
+                </div>
 
-  <div class="project-content">
-    <h3> Patata Mágica - TheHackersLabs (Fácil)</h3>
-
-    <p>
-      Análisis de una máquina Windows vulnerable enfocada en enumeración,
-      detección de fallos de configuración y escalada de privilegios.
-    </p>
-
-    <div class="project-tags">
-      <span class="tag">Local File Inclusion (LFI)</span>
-      <span class="tag">Enumeración</span>
-      <span class="tag">Reverse shell vía web</span>
-      <span class="tag">Privilege Escalation</span>
-    </div>
-
-    <div class="project-links">
-      <a href="https://github.com/K3NNA11/thl-patata-magica-windows" target="_blank">
-        🔗 Ver Write-up
-      </a>
-    </div>
-  </div>
-</div>
                 <div class="project-card" data-category="security">
                     <div class="project-image">🔒</div>
                     <div class="project-content">
-                        <h3>Network Vulnerability Scanner</h3>
-                        <p>Automated tool for scanning network vulnerabilities and generating comprehensive security reports. Built with Python and integrated with CVE databases.</p>
+                        <h3 data-es="Escáner de Vulnerabilidades" data-en="Network Vulnerability Scanner">Escáner de Vulnerabilidades</h3>
+                        <p data-es="Herramienta automatizada para escanear vulnerabilidades de red y generar informes de seguridad. Construida con Python e integrada con bases de datos CVE." data-en="Automated tool for scanning network vulnerabilities and generating comprehensive security reports. Built with Python and integrated with CVE databases.">Herramienta automatizada para escanear vulnerabilidades de red y generar informes de seguridad. Construida con Python e integrada con bases de datos CVE.</p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
-                            <span class="tag">Security</span>
+                            <span class="tag" data-es="Seguridad" data-en="Security">Seguridad</span>
                         </div>
                         <div class="project-links">
-                            <a href="#">🔗 Repositorio</a>
+                            <a href="#" data-es="🔗 Repositorio" data-en="🔗 Repository">🔗 Repositorio</a>
                             <a href="#">🚀 Demo</a>
                         </div>
                     </div>
@@ -973,14 +1003,14 @@
                 <div class="project-card" data-category="pentesting">
                     <div class="project-image">🌐</div>
                     <div class="project-content">
-                        <h3>Web App Penetration Testing</h3>
-                        <p>Comprehensive security assessment of web applications including OWASP Top 10 vulnerabilities, SQL injection, XSS, and authentication bypass testing.</p>
+                        <h3 data-es="Pentesting de Aplicaciones Web" data-en="Web App Penetration Testing">Pentesting de Aplicaciones Web</h3>
+                        <p data-es="Evaluación de seguridad de aplicaciones web incluyendo vulnerabilidades OWASP Top 10, inyección SQL, XSS y pruebas de bypass de autenticación." data-en="Comprehensive security assessment of web applications including OWASP Top 10 vulnerabilities, SQL injection, XSS, and authentication bypass testing.">Evaluación de seguridad de aplicaciones web incluyendo vulnerabilidades OWASP Top 10, inyección SQL, XSS y pruebas de bypass de autenticación.</p>
                         <div class="project-tags">
                             <span class="tag">Pentesting</span>
                             <span class="tag">OWASP</span>
                         </div>
                         <div class="project-links">
-                            <a href="#">🔗 Repositorio</a>
+                            <a href="#" data-es="🔗 Repositorio" data-en="🔗 Repository">🔗 Repositorio</a>
                             <a href="#">🚀 Demo</a>
                         </div>
                     </div>
@@ -989,14 +1019,14 @@
                 <div class="project-card" data-category="security">
                     <div class="project-image">📊</div>
                     <div class="project-content">
-                        <h3>SIEM Dashboard</h3>
-                        <p>Security Information and Event Management dashboard for real-time threat detection and log analysis using ELK stack.</p>
+                        <h3 data-es="Dashboard SIEM" data-en="SIEM Dashboard">Dashboard SIEM</h3>
+                        <p data-es="Dashboard de gestión de eventos de seguridad para detección de amenazas en tiempo real y análisis de logs usando ELK stack." data-en="Security Information and Event Management dashboard for real-time threat detection and log analysis using ELK stack.">Dashboard de gestión de eventos de seguridad para detección de amenazas en tiempo real y análisis de logs usando ELK stack.</p>
                         <div class="project-tags">
                             <span class="tag">SIEM</span>
-                            <span class="tag">Monitoring</span>
+                            <span class="tag" data-es="Monitoreo" data-en="Monitoring">Monitoreo</span>
                         </div>
                         <div class="project-links">
-                            <a href="#">🔗 Repositorio</a>
+                            <a href="#" data-es="🔗 Repositorio" data-en="🔗 Repository">🔗 Repositorio</a>
                             <a href="#">🚀 Demo</a>
                         </div>
                     </div>
@@ -1008,10 +1038,10 @@
     <!-- Contact Section -->
     <section id="contact" class="section-dark">
         <div class="container">
-            <h2 class="section-title glow-text">Contacto</h2>
+            <h2 class="section-title glow-text" data-es="Contacto" data-en="Contact">Contacto</h2>
             <form class="contact-form" id="contactForm">
                 <div class="form-group">
-                    <label for="name">Nombre</label>
+                    <label for="name" data-es="Nombre" data-en="Name">Nombre</label>
                     <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
@@ -1019,16 +1049,16 @@
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">Mensaje</label>
+                    <label for="message" data-es="Mensaje" data-en="Message">Mensaje</label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
-                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                <button type="submit" class="submit-btn" data-es="Enviar Mensaje" data-en="Send Message">Enviar Mensaje</button>
             </form>
             <div class="contact-socials">
                 <a href="#" class="contact-social">🔗</a>
                 <a href="#" class="contact-social">💼</a>
                 <a href="#" class="contact-social">🐦</a>
-                <a href="mailto:tu@email.com" class="contact-social">📧</a>
+                <a href="mailto:jorge@email.com" class="contact-social">📧</a>
             </div>
         </div>
     </section>
@@ -1044,11 +1074,33 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="copyright">© 2024 Todos los derechos reservados</div>
+            <div class="copyright" data-es="© 2024 Todos los derechos reservados" data-en="© 2024 All rights reserved">© 2024 Todos los derechos reservados</div>
         </div>
     </footer>
 
     <script>
+        // Language Switcher
+        let currentLang = 'es';
+        const langSwitcher = document.getElementById('langSwitcher');
+        const langText = document.getElementById('langText');
+
+        langSwitcher.addEventListener('click', () => {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            langText.textContent = currentLang.toUpperCase();
+            
+            // Update all elements with data-en and data-es attributes
+            document.querySelectorAll('[data-en][data-es]').forEach(element => {
+                const translation = element.getAttribute(`data-${currentLang}`);
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = translation;
+                } else if (element.innerHTML.includes('<br>')) {
+                    element.innerHTML = translation;
+                } else {
+                    element.textContent = translation;
+                }
+            });
+        });
+
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
@@ -1083,7 +1135,8 @@
         // Form submission
         document.getElementById('contactForm').addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('¡Gracias! Mensaje enviado correctamente.');
+            const message = currentLang === 'es' ? '¡Gracias! Mensaje enviado correctamente.' : 'Thank you! Message sent successfully.';
+            alert(message);
             e.target.reset();
         });
 
